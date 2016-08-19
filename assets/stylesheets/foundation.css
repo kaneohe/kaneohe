@@ -6813,6 +6813,28 @@ body#tinymce {
 [data-whatinput="mouse"] a:focus, button:focus [data-whatinput="touch"] a:focus, button:focus {
   outline: none; }
 
+.languages {
+  background-color: #C6D96E;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  .languages #lang_sel_list {
+    height: auto; }
+    .languages #lang_sel_list ul {
+      border-top: none; }
+      .languages #lang_sel_list ul li {
+        float: left;
+        margin-right: 10px; }
+        .languages #lang_sel_list ul li a.lang_sel_other,
+        .languages #lang_sel_list ul li a:link,
+        .languages #lang_sel_list ul li a.lang_sel_other:visited {
+          font-size: 18px;
+          color: #A26346;
+          background-color: transparent; }
+        .languages #lang_sel_list ul li a.lang_sel_sel {
+          font-size: 18px;
+          color: #A26346;
+          text-decoration: underline !important; }
+
 #front-hero {
   background: url("../images/demo/hero-bg-foundation-6-small.svg") bottom center;
   -webkit-background-size: cover;
