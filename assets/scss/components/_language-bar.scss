@@ -1,0 +1,32 @@
+.languages {
+	background-color: #C6D96E;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+	#lang_sel_list {
+		height: auto;
+		
+		ul {
+			border-top: none;
+			
+			li {
+				float: left;
+				margin-right: 10px;
+				
+				a.lang_sel_other,
+				a:link,
+				a.lang_sel_other:visited {
+					font-size: 18px;
+					color: #A26346;
+					background-color: transparent;
+				}
+				
+				a.lang_sel_sel {
+					font-size: 18px;
+					color: #A26346;
+					text-decoration: underline !important;
+				}
+			}
+		}
+	}
+}
