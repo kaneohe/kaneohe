@@ -20,6 +20,10 @@
 // Third-party libraries
 @import 'font-awesome';
 @import 'motion-ui';
+@import 'slick.scss';
+$slick-font-path: "../fonts/";
+$slick-loader-path: "../javascript/vendor/slick-carousel/";
+@import 'slick-theme.scss';
 
 // Foundation global styles
 @include foundation-global-styles;

@@ -50,5 +50,8 @@ require_once( 'library/responsive-images.php' );
 /** Add WPML support */
 require_once( 'library/wpml.php' );
 
+/** Add ACF support */
+require_once( 'library/acf.php' );
+
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/protocol-relative-theme-assets.php' );
