@@ -50,5 +50,14 @@ require_once( 'library/responsive-images.php' );
 /** Add WPML support */
 require_once( 'library/wpml.php' );
 
+/** Add Header Widgets */
+require_once( 'library/header-widgets.php' );
+
+/** Add Image Widget */
+require_once( 'library/widget-image.php' );
+
+/** Add Rich Text Widget */
+require_once( 'library/widget-rich-text.php' );
+
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/protocol-relative-theme-assets.php' );
