@@ -9,5 +9,5 @@ if ( ! function_exists( 'kaneohe_wpml' ) ) :
 			</div>
 		<?php endif;
 	}
-	add_action( 'foundationpress_layout_start', 'kaneohe_wpml_header' );
+	add_action( 'foundationpress_layout_start', 'kaneohe_wpml_header', 1 );
 endif;

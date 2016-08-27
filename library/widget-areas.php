@@ -19,6 +19,36 @@ function foundationpress_sidebar_widgets() {
 		));
 
 		register_sidebar(array(
+		  'id' => 'header-widget-1',
+		  'name' => __( 'Header Widget 1', 'foundationpress' ),
+		  'description' => __( 'Drag widgets to this sidebar container.', 'foundationpress' ),
+		  'before_widget' => '<article id="%1$s" class="widget %2$s">',
+		  'after_widget' => '</article>',
+		  'before_title' => '<h6>',
+		  'after_title' => '</h6>',
+		));
+
+		register_sidebar(array(
+		  'id' => 'header-widget-2',
+		  'name' => __( 'Header Widget 2', 'foundationpress' ),
+		  'description' => __( 'Drag widgets to this sidebar container.', 'foundationpress' ),
+		  'before_widget' => '<article id="%1$s" class="widget %2$s">',
+		  'after_widget' => '</article>',
+		  'before_title' => '<h6>',
+		  'after_title' => '</h6>',
+		));		
+
+		register_sidebar(array(
+		  'id' => 'header-widget-3',
+		  'name' => __( 'Header Widget 3', 'foundationpress' ),
+		  'description' => __( 'Drag widgets to this sidebar container.', 'foundationpress' ),
+		  'before_widget' => '<article id="%1$s" class="widget %2$s">',
+		  'after_widget' => '</article>',
+		  'before_title' => '<h6>',
+		  'after_title' => '</h6>',
+		));
+
+		register_sidebar(array(
 		  'id' => 'footer-widgets',
 		  'name' => __( 'Footer widgets', 'foundationpress' ),
 		  'description' => __( 'Drag widgets to this footer container', 'foundationpress' ),
