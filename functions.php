@@ -52,6 +52,8 @@ require_once( 'library/wpml.php' );
 
 /** Add ACF support */
 require_once( 'library/acf.php' );
+require_once( 'library/acf-header.php' );
+require_once( 'library/acf-flexible-content.php' );
 
 /** Add header */
 require_once( 'library/header.php' );
