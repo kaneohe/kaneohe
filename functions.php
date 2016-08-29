@@ -53,8 +53,8 @@ require_once( 'library/wpml.php' );
 /** Add ACF support */
 require_once( 'library/acf.php' );
 
-/** Add header sidebar */
-require_once( 'library/sidebar-header.php' );
+/** Add header */
+require_once( 'library/header.php' );
 
 /** Add Image Widget */
 require_once( 'library/widget-image.php' );
