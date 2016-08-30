@@ -1,23 +1,19 @@
 <?php
-if ( ! function_exists( 'header_widgets' ) ) :
-	function header_widgets() {
+if ( ! function_exists( 'header_include' ) ) :
+	function header_include() {
 ?>
+		<header class="header">
 			<div class="row">
-				<div class="small-12 medium-4 columns">
-					<?php dynamic_sidebar('header-widget-1'); ?>	
+				<div class="small-6 columns">
+				<?php if ( $logo = get_field( 'logo', 'option' ) ) : ?>
+					<a href="<?php echo site_url(); ?>"><img src="<?php echo $logo['url']; ?>"></a>
+				<?php endif; ?>
 				</div>
-				<div class="small-12 medium-8 columns">
-					<div class="row">
-						<div class="small-12 small-6 columns">
-							<?php dynamic_sidebar('header-widget-2'); ?>
-						</div>
-						<div class="small-12 small-6 columns">
-							<?php dynamic_sidebar('header-widget-3'); ?>
-						</div>
-					</div> <!-- .row -->
-				</div> 
-			</div> <!-- .row -->
+				<div class="small-3 columns"><?php the_field( 'column_1', 'option' ); ?></div>
+				<div class="small-3 columns"><?php the_field( 'column_2', 'option' ); ?></div>
+			</div>
+		</header>
 <?php 
 	}
-	add_action( 'foundationpress_layout_start', 'header_widgets', 2 );
+	add_action( 'foundationpress_layout_start', 'header_include', 2 );
 endif;

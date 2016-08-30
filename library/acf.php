@@ -8,6 +8,28 @@ if ( ! function_exists( 'kaneohe_acf' ) ) :
 		
 			while ( have_rows( 'content', $post->ID ) ) : the_row();
 			
+				// Media Object
+				if ( get_row_layout() == 'media_object' ) :
+				
+					if ( $img = get_sub_field( 'image' ) ) :
+					
+						$content .= '<section class="kaneohe-media-object">';
+						$content .= '<div class="row">';
+						$content .= '<div class="media-object">';
+						$content .= '<div class="media-object-section">';
+						$content .= '<img src="' . $img['url'] . '">';
+						$content .= '</div>';
+						$content .= '<div class="media-object-section">';
+						$content .= '<h4>' . get_sub_field( 'heading' ) . '</h4>';
+						$content .= get_sub_field( 'content' );
+						$content .= '</div>';
+						$content .= '</div><!-- .row -->';
+						$content .= '</section>';
+					
+					endif;
+				
+				endif;
+			
 				// Gallery
 				if ( get_row_layout() == 'gallery' ) :
 					
@@ -17,7 +39,7 @@ if ( ! function_exists( 'kaneohe_acf' ) ) :
 					
 						if ( get_sub_field( 'slideshow' ) ) : 
 						
-							$content .= '<section class="gallery">';
+							$content .= '<section class="kaneohe-gallery">';
 							$content .= '<div class="row">';
 							$content .= '<div class="slideshow">';
 							foreach ( $gallery as $image ) : 
@@ -35,7 +57,7 @@ if ( ! function_exists( 'kaneohe_acf' ) ) :
 						
 						else :
 					
-							$content .= '<section class="text">';
+							$content .= '<section class="kaneohe-text">';
 							$content .= '<div class="row">';
 							$content .= '<div class="small-6 medium-3 columns">';
 							foreach ( $gallery as $image ) : 

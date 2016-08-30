@@ -26,9 +26,6 @@ require_once( 'library/navigation.php' );
 /** Add menu walkers for top-bar and off-canvas */
 require_once( 'library/menu-walkers.php' );
 
-/** Create widget areas in sidebar and footer */
-require_once( 'library/widget-areas.php' );
-
 /** Return entry meta information for posts */
 require_once( 'library/entry-meta.php' );
 
@@ -50,6 +47,9 @@ require_once( 'library/responsive-images.php' );
 /** Add WPML support */
 require_once( 'library/wpml.php' );
 
+/** Add additional header section */
+require_once( 'library/header.php' );
+
 /** Add ACF support */
 require_once( 'library/acf.php' );
 require_once( 'library/acf-header.php' );
@@ -57,12 +57,6 @@ require_once( 'library/acf-flexible-content.php' );
 
 /** Add header */
 require_once( 'library/header.php' );
-
-/** Add Image Widget */
-require_once( 'library/widget-image.php' );
-
-/** Add Rich Text Widget */
-require_once( 'library/widget-rich-text.php' );
 
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/protocol-relative-theme-assets.php' );
