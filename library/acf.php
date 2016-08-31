@@ -79,52 +79,43 @@ if ( ! function_exists( 'kaneohe_acf' ) ) :
 				// Text current supports 1, 2, or 3 columns
 				if ( get_row_layout() == 'text' ) : 
 				
+					$content .= '<section class="kaneohe-text">';
 					$content .= '<div class="row">';
 					
 					switch ( get_sub_field( 'columns' ) ) {
 						
 						case '1' :
-							$content .= '<section class="kaneohe-text">';
+							
 							$content .= '<div class="small-12 columns">';
 							$content .= get_sub_field('column_1');
 							$content .= '</div>';
-							$content .= '</section>';
 							break;
 							
 						case '2' :
-							$content .= '<section class="kaneohe-text">'; 
 							$content .= '<div class="small-12 medium-6 columns">';
 							$content .= get_sub_field('column_1');
 							$content .= '</div>';
-							$content .= '</section>';
-							$content .= '<section class="kaneohe-text">';
 							$content .= '<div class="small-12 medium-6 columns">';
 							$content .= get_sub_field('column_2');
 							$content .= '</div>';
-							$content .= '</section>';
 							break;
 							
 						case '3' :
-							$content .= '<section class="kaneohe-text">'; 
 							$content .= '<div class="small-12 medium-4 columns">';
 							$content .= get_sub_field('column_1');
 							$content .= '</div>';
-							$content .= '</section>';
-							$content .= '<section class="kaneohe-text">'; 
 							$content .= '<div class="small-12 medium-4 columns">';
 							$content .= get_sub_field('column_2');
 							$content .= '</div>';
-							$content .= '</section>';
-							$content .= '<section class="kaneohe-text">'; 
 							$content .= '<div class="small-12 medium-4 columns">';
 							$content .= get_sub_field('column_2');
 							$content .= '</div>';
-							$content .= '</section>';
 							break;
 							
 					}
 					
 					$content .= '</div><!-- .row -->';
+					$content .= '</section>';
 				
 				endif;
 			
