@@ -83,31 +83,43 @@ if ( ! function_exists( 'kaneohe_acf' ) ) :
 					
 					switch ( get_sub_field( 'columns' ) ) {
 						
-						case '1' : 
+						case '1' :
+							$content .= '<section class="kaneohe-text">';
 							$content .= '<div class="small-12 columns">';
 							$content .= get_sub_field('column_1');
 							$content .= '</div>';
+							$content .= '</section>';
 							break;
 							
-						case '2' : 
+						case '2' :
+							$content .= '<section class="kaneohe-text">'; 
 							$content .= '<div class="small-12 medium-6 columns">';
 							$content .= get_sub_field('column_1');
 							$content .= '</div>';
+							$content .= '</section>';
+							$content .= '<section class="kaneohe-text">';
 							$content .= '<div class="small-12 medium-6 columns">';
 							$content .= get_sub_field('column_2');
 							$content .= '</div>';
+							$content .= '</section>';
 							break;
 							
-						case '3' : 
+						case '3' :
+							$content .= '<section class="kaneohe-text">'; 
 							$content .= '<div class="small-12 medium-4 columns">';
 							$content .= get_sub_field('column_1');
 							$content .= '</div>';
+							$content .= '</section>';
+							$content .= '<section class="kaneohe-text">'; 
 							$content .= '<div class="small-12 medium-4 columns">';
 							$content .= get_sub_field('column_2');
 							$content .= '</div>';
+							$content .= '</section>';
+							$content .= '<section class="kaneohe-text">'; 
 							$content .= '<div class="small-12 medium-4 columns">';
 							$content .= get_sub_field('column_2');
 							$content .= '</div>';
+							$content .= '</section>';
 							break;
 							
 					}
