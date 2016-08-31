@@ -14,16 +14,25 @@ if ( ! function_exists( 'kaneohe_acf' ) ) :
 					if ( $img = get_sub_field( 'image' ) ) :
 					
 						$content .= '<section class="kaneohe-media-object">';
-						$content .= '<div class="row">';
-						$content .= '<div class="media-object">';
-						$content .= '<div class="media-object-section">';
-						$content .= '<img src="' . $img['url'] . '">';
-						$content .= '</div>';
-						$content .= '<div class="media-object-section">';
-						$content .= '<h4>' . get_sub_field( 'heading' ) . '</h4>';
-						$content .= get_sub_field( 'content' );
-						$content .= '</div>';
-						$content .= '</div><!-- .row -->';
+						$content .= '	<div class="row">';
+						$content .= '		<div class="small-12 columns">';
+						$content .= '			<div class="media-object">';
+						$content .= '				<div class="row">';
+						$content .= '					<div class="small-12 medium-6 columns">';
+						$content .= '						<div class="media-object-section">';
+						$content .= '							<img src="' . $img['url'] . '">';
+						$content .= '						</div> <!-- .media-object-section -->';
+						$content .= '					</div> <!-- .small-12 -->';
+						$content .= '					<div class="small-12 medium-6 columns">';
+						$content .= '						<div class="media-object-section">';
+						$content .= '							<h4>' . get_sub_field( 'heading' ) . '</h4>';
+						$content .= 							get_sub_field( 'content' );
+						$content .= '						</div> <!-- .media-object-section -->';
+						$content .= '					</div> <!-- .small-12 -->';
+						$content .= '				</div><!-- .row -->';
+						$content .= '			</div> <!-- .media-object -->';
+						$content .= '		</div> <!-- .small-12 -->';
+						$content .= '	</div> <!-- .row -->';
 						$content .= '</section>';
 					
 					endif;
