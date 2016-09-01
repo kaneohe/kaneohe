@@ -51,8 +51,8 @@
 						<?php endif; ?>
 					</div>
 				</nav>
-			</div> <!-- .small-12 -->
-		</div> <!-- .row -->
+			</div><!-- .small-12 -->
+		</div><!-- .row -->
 	</header>
 
 	<section class="container">
