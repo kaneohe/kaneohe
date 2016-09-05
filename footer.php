@@ -14,7 +14,9 @@
 		<div id="footer-container">
 			<footer id="footer">
 				<?php do_action( 'foundationpress_before_footer' ); ?>
-				<?php dynamic_sidebar( 'footer-widgets' ); ?>
+				<?php if ( ! dynamic_sidebar( 'footer-widgets' ) ): ?>
+					<p>&copy; <?php _e( 'Copyright' ); ?> <?php echo date('Y'); ?> <?php echo bloginfo( 'title' ); ?>. <?php _e( 'All Rights Reserved.'); ?></p>
+				<?php endif; ?>
 				<?php do_action( 'foundationpress_after_footer' ); ?>
 			</footer>
 		</div>

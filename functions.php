@@ -26,6 +26,9 @@ require_once( 'library/navigation.php' );
 /** Add menu walkers for top-bar and off-canvas */
 require_once( 'library/menu-walkers.php' );
 
+/** Create widget areas in sidebar and footer */
+require_once( 'library/widget-areas.php' );
+
 /** Return entry meta information for posts */
 require_once( 'library/entry-meta.php' );
 
