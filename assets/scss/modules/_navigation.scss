@@ -65,6 +65,10 @@
       display: none;
     }
 
+  .dropdown.menu.is-dropdown-submenu {
+    min-width: 300px !important;
+  }
+
 }
 /* Basic styles for post navigation. Nicolas Gallagher's "Micro clearfix" https://css-tricks.com/snippets/css/clear-fix/ */
 .post-navigation:before,
