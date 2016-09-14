@@ -61,5 +61,8 @@ require_once( 'library/acf-flexible-content.php' );
 /** Add header */
 require_once( 'library/header.php' );
 
+/** Breadcrumb support */
+require_once( 'library/breadcrumbs.php' );
+
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/protocol-relative-theme-assets.php' );
