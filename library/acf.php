@@ -38,6 +38,59 @@ if ( ! function_exists( 'kaneohe_acf' ) ) :
 					endif;
 				
 				endif;
+				
+				// Slideshow
+				if ( get_row_layout() == 'slideshow' ) :
+				
+				
+					$num_slides = get_sub_field( 'slides' );
+					$column_class = 'small-4 columns';
+					switch ( $num_slides ) {
+						case 1 : $column_class = 'small-12 columns'; break;
+						case 2 : $column_class = 'small-6 columns'; break;
+						case 3 : $column_class = 'small-4 columns'; break;
+						case 4 : $column_class = 'small-3 columns'; break;
+						case 6 : $column_class = 'small-2 columns'; break;
+						case 12 : $column_class = 'small-1 columns'; break;
+						default : break;
+					}
+					
+					if ( have_rows( 'slide' ) ) : 
+					
+						$content .= '<section class="kaneohe-gallery">';
+						$content .= '<div class="row">';
+						$content .= '<div class="slideshow">';
+						
+						while ( have_rows( 'slide' ) ) : the_row();
+						
+							$photo = get_sub_field( 'photo' );
+							$content .= '<div class="' . $column_class . '">';
+							
+							$link = get_sub_field( 'link' );
+							
+							if ( $link ) {
+								$content .= '<a href="' . $link . '">';
+							}
+							
+							$content .= '<img src="' . $photo['url'] . '" alt="' . $photo['alt'] . '" />';
+							
+							if ( $link ) {
+								$content .= '</a>';
+							}
+							
+							//$content .= '<p>' . $image['caption'] . '</p>';
+							$content .= '</div>';
+							
+						endwhile;
+						
+						$content .= '</div><!-- .slidshow -->';
+						$content .= '</div><!-- .row -->';
+						$content .= '</section>';
+					
+					
+					endif;
+					
+				endif;
 			
 				// Gallery
 				if ( get_row_layout() == 'gallery' ) :
@@ -46,40 +99,18 @@ if ( ! function_exists( 'kaneohe_acf' ) ) :
 					
 					if ( $gallery ) : 
 					
-						if ( get_sub_field( 'slideshow' ) ) : 
-						
-							$content .= '<section class="kaneohe-gallery">';
-							$content .= '<div class="row">';
-							$content .= '<div class="slideshow">';
-							foreach ( $gallery as $image ) : 
-								$content .= '<div class="small-4 columns">';
-								//$content .= '<a href="' . $image['url'] . '">';
-								//$content .= '<img src="' . $image['sizes']['thumbnail'] . '" alt="' . $image['alt'] . '" />';
-								$content .= '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '" />';
-								//$content .= '</a>';
-								//$content .= '<p>' . $image['caption'] . '</p>';
-								$content .= '</div>';
-							endforeach;
-							$content .= '</div><!-- .slidshow -->';
-							$content .= '</div><!-- .row -->';
-							$content .= '</section>';
-						
-						else :
-					
-							$content .= '<section class="kaneohe-text">';
-							$content .= '<div class="row">';
-							$content .= '<div class="small-6 medium-3 columns">';
-							foreach ( $gallery as $image ) : 
-								$content .= '<a href="' . $image['url'] . '">';
-								$content .= '<img src="' . $image['sizes']['thumbnail'] . '" alt="' . $image['alt'] . '" />';
-								$content .= '</a>';
-								$content .= '<p>' . $image['caption'] . '</p>';
-							endforeach;
-							$content .= '</div>';
-							$content .= '</div><!-- .row -->';
-							$content .= '</section>';
-						
-						endif;
+						$content .= '<section class="kaneohe-gallery">';
+						$content .= '<div class="row">';
+						$content .= '<div class="small-6 medium-3 columns">';
+						foreach ( $gallery as $image ) : 
+							$content .= '<a href="' . $image['url'] . '">';
+							$content .= '<img src="' . $image['sizes']['thumbnail'] . '" alt="' . $image['alt'] . '" />';
+							$content .= '</a>';
+							//$content .= '<p>' . $image['caption'] . '</p>';
+						endforeach;
+						$content .= '</div>';
+						$content .= '</div><!-- .row -->';
+						$content .= '</section>';
 						
 					endif;
 					
