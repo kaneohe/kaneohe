@@ -50,13 +50,15 @@ require_once( 'library/responsive-images.php' );
 /** Add WPML support */
 require_once( 'library/wpml.php' );
 
-/** Add additional header section */
-require_once( 'library/header.php' );
-
 /** Add ACF support */
 require_once( 'library/acf.php' );
-require_once( 'library/acf-header.php' );
+//require_once( 'library/acf-header.php' );
 require_once( 'library/acf-flexible-content.php' );
+
+require_once( 'library/acf-sidebar.php' );
+
+require_once( 'library/kaneohe-flexible-content.php' );
+require_once( 'library/kaneohe-acf.php' );
 
 /** Add header */
 require_once( 'library/header.php' );
