@@ -54,7 +54,7 @@ require_once( 'library/wpml.php' );
 require_once( 'library/acf.php' );
 //require_once( 'library/acf-header.php' );
 require_once( 'library/acf-flexible-content.php' );
-
+require_once( 'library/acf-header.php' );
 require_once( 'library/acf-sidebar.php' );
 
 require_once( 'library/kaneohe-flexible-content.php' );
