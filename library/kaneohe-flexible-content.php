@@ -113,17 +113,30 @@ function kaneohe_slideshow() {
             $photo = get_sub_field( 'photo' );
             $content .= '<div class="' . $column_class . '">';
 
-            $link = get_sub_field( 'link' );
+            $link_before = '';
+            $link_after = '';
+            if ( get_sub_field( 'image_link' ) ) {
+                switch ( get_sub_field( 'image_link' ) ) {
 
-            if ( $link ) {
-                $content .= '<a href="' . $link . '">';
+                    case 'internal' :
+                        $link_before = '<a href="' . get_sub_field( 'link' ) . '">';
+                        $link_after = '</a>';
+                        break;
+                    case 'external' :
+                        $link_before = '<a href="' . get_sub_field( 'external_link' ) . '" target="_blank">';
+                        $link_after = '</a>';
+                        break;
+                    case 'none' :
+                    default :
+                        break;
+                }
             }
+
+            $content .= $link_before;
 
             $content .= '<img src="' . $photo['url'] . '" alt="' . $photo['alt'] . '" />';
 
-            if ( $link ) {
-                $content .= '</a>';
-            }
+            $content .= $link_after;
 
             //$content .= '<p>' . $image['caption'] . '</p>';
             $content .= '</div>';

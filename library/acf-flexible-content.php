@@ -227,6 +227,35 @@ acf_add_local_field_group(array (
 							'button_label' => 'Add Slide',
 							'sub_fields' => array (
 								array (
+									'key' => 'field_57ec4384d63ff',
+									'label' => 'Image Link',
+									'name' => 'image_link',
+									'type' => 'select',
+									'instructions' => '',
+									'required' => 0,
+									'conditional_logic' => 0,
+									'wrapper' => array (
+										'width' => '',
+										'class' => '',
+										'id' => '',
+									),
+									'choices' => array (
+										'none' => 'No Link',
+										'internal' => 'Internal Link',
+										'external' => 'External Link',
+									),
+									'default_value' => array (
+										0 => 'none',
+									),
+									'allow_null' => 0,
+									'multiple' => 0,
+									'ui' => 0,
+									'ajax' => 0,
+									'placeholder' => '',
+									'disabled' => 0,
+									'readonly' => 0,
+								),
+								array (
 									'key' => 'field_57d9846684343',
 									'label' => 'Photo',
 									'name' => 'photo',
@@ -257,7 +286,15 @@ acf_add_local_field_group(array (
 									'type' => 'page_link',
 									'instructions' => '',
 									'required' => 0,
-									'conditional_logic' => 0,
+									'conditional_logic' => array (
+										array (
+											array (
+												'field' => 'field_57ec4384d63ff',
+												'operator' => '==',
+												'value' => 'internal',
+											),
+										),
+									),
 									'wrapper' => array (
 										'width' => '',
 										'class' => '',
@@ -271,6 +308,35 @@ acf_add_local_field_group(array (
 									),
 									'allow_null' => 0,
 									'multiple' => 0,
+								),
+								array (
+									'key' => 'field_57ec436ed63fe',
+									'label' => 'External Link',
+									'name' => 'external_link',
+									'type' => 'text',
+									'instructions' => '',
+									'required' => 0,
+									'conditional_logic' => array (
+										array (
+											array (
+												'field' => 'field_57ec4384d63ff',
+												'operator' => '==',
+												'value' => 'external',
+											),
+										),
+									),
+									'wrapper' => array (
+										'width' => '',
+										'class' => '',
+										'id' => '',
+									),
+									'default_value' => '',
+									'placeholder' => '',
+									'prepend' => '',
+									'append' => '',
+									'maxlength' => '',
+									'readonly' => 0,
+									'disabled' => 0,
 								),
 							),
 						),
