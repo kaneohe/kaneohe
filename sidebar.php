@@ -14,7 +14,9 @@
 
 	<?php if ( have_rows( 'sidebar_content', 'options' ) ) : ?>
 		<?php while ( have_rows( 'sidebar_content', 'options' ) ) : the_row(); ?>
-			<?php echo kaneohe_flex_content(); ?>
+			<article class="widget">
+				<?php echo kaneohe_flex_content(); ?>
+			</article>
 		<?php endwhile; ?>
 	<?php endif; ?>
 </aside>
