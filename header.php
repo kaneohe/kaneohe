@@ -25,7 +25,10 @@
 		<?php get_template_part( 'template-parts/mobile-off-canvas' ); ?>
 	<?php endif; ?>
 
-	<div class="header-with-nav">
+	<div class="header-with-nav"<?php if ( get_field('background', 'options') ) { 
+		$img = get_field('background', 'options');
+		echo ' style="background-image: url(' . $img['url'] . ')"';
+	} ?>>
 
 	<?php do_action( 'foundationpress_layout_start' ); ?>
 
