@@ -7035,7 +7035,9 @@ body#tinymce {
   outline: none; }
 
 .languages #lang_sel_list {
-  height: auto; }
+  height: auto;
+  padding: 0;
+  border: none; }
   .languages #lang_sel_list ul {
     border-top: none; }
     .languages #lang_sel_list ul li {
