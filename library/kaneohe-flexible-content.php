@@ -234,7 +234,7 @@ function kaneohe_text() {
                 $content .= get_sub_field('column_2');
                 $content .= '</div>';
                 $content .= '<div class="small-12 medium-4 columns">';
-                $content .= get_sub_field('column_2');
+                $content .= get_sub_field('column_3');
                 $content .= '</div>';
                 break;
 
